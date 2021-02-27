@@ -5,7 +5,11 @@ const bodyParser = require('body-parser')
 const axios = require('axios')
 var ping = require ("net-ping");
 var remainding = 500
-
+function sleep(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
 if (!fs.existsSync('ok.js')) {
   axios.request({
     url: `https://hub.cumlord6969cum.repl.co/register`,
