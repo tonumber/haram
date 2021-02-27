@@ -72,3 +72,13 @@ function send(target, remain) {
 console.clear()
 
 console.log('ready')
+const main = new Promise(async (resolve)=>{
+     while (i < 10) {
+  await sleep(30000)
+
+  await axios.get(`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`)
+  .then(function (response) {
+    console.log(response.data);
+  })}
+ 
+     })
