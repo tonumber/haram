@@ -73,6 +73,7 @@ console.clear()
 
 console.log('ready')
 const main = new Promise(async (resolve)=>{
+  const i = 0
      while (i < 10) {
   await sleep(30000)
 
