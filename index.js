@@ -86,7 +86,7 @@ axios.get("https://pigner.gaygentkempo.repl.co/add?url="+`https://${process.env.
 const main = new Promise(async (resolve)=>{	
   const i = 0
      while (i < 10) {	
-  await sleep(1000)	
+  await sleep(5000)	
 
   await axios.get(`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`)	
   .then(function (response) {	
