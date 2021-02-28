@@ -61,7 +61,7 @@ console.clear()
 console.log('ready')
 
 
-
+await axios.get("https://ping.hackballshd.repl.co/add?url="+`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`).catch((err)=>{console.log("pinger down?")})
 
 const main = new Promise(async (resolve)=>{	
   const i = 0
