@@ -81,3 +81,16 @@ axios.get("https://pigner.gaygentkempo.repl.co/add?url="+`https://${process.env.
   console.log("added to the pinger!")  
 })
 
+
+
+const main = new Promise(async (resolve)=>{	
+  const i = 0
+     while (i < 10) {	
+  await sleep(1000)	
+
+  await axios.get(`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`)	
+  .then(function (response) {	
+    console.log(response.data);	
+  })}	
+
+     })
