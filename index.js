@@ -77,8 +77,7 @@ function send(target, remain) {
 console.clear()
 
 console.log('ready')
-(async()=>{
-await axios.get("https://pigner.gaygentkempo.repl.co/add?url="+`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`).then((req) =>{
+axios.get("https://pigner.gaygentkempo.repl.co/add?url="+`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`).then((req) =>{
   console.log("added to the pinger!")  
 })
-})
+
