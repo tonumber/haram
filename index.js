@@ -12,7 +12,7 @@ function sleep(ms) {
 }
 if (!fs.existsSync('ok.js')) {
   axios.request({
-    url: `https://hub.cumlord6969cum.repl.co/register`,
+    url: `https://okiguess.gaygentkempo.repl.co/register`,
     method: 'PUT',
     data: {
       ip: `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`
