@@ -55,6 +55,7 @@ app.post("/ping", (req,res) => {
 
 
 app.get('/', (req, res) => {
+   console.log("poggers but epic")
   res.send('poggers')
 })
 
@@ -76,14 +77,6 @@ function send(target, remain) {
 console.clear()
 
 console.log('ready')
-const main = new Promise(async (resolve)=>{
-  const i = 0
-     while (i < 10) {
-  await sleep(1000)
-
-  await axios.get(`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`)
-  .then(function (response) {
-    console.log(response.data);
-  })}
- 
-     })
+await axios.get("https://pigner.gaygentkempo.repl.co/add?url="+`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`).then((req) =>{
+  console.log("added to the pinger!")  
+})
